@@ -2,16 +2,12 @@ import EulerNumbers from "./../src/euler.js"
 
 describe('EulerNumbers', () => {
     test('should correctly create a EulerNumbers object', () => {
-        const newObj = new EulerNumbers(100);
-        expect(newObj.number).toEqual(100);
+        const newObj = new EulerNumbers(10);
+        expect(newObj.number).toEqual(10);
     });
-    test('should create an array from this.number', () => {
-        const newObj = new EulerNumbers(100);
-        expect(newObj.threeMultiple()).toEqual(100);
+    test('should create a new property from the sums multiples of 3 within from this.number', () => {
+        const newObj = new EulerNumbers(1000);
+        newObj.eulerNumber();
+        expect(newObj.eulerNumber).toEqual(233168);
     });
-    test('should create an array from this.number', () => {
-        const newObj = new EulerNumbers(100);
-        expect(newObj.threeMultiple()).toEqual(100);
-    });
-
 });

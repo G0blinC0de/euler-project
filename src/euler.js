@@ -2,17 +2,30 @@ export default function EulerNumbers(number) {
     this.number = number;
 }
 
-EulerNumbers.prototype.threeMultiple = function () {
-    this.array = [];
-    this.array.push(this.number);
-    this.array.push(this.number);
-    return this.array;
+EulerNumbers.prototype.eulerNumber = function () {
+    let sum = 0;
+    for (let i = 1; i <= this.number - 1; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+        }
+        this.eulerNumber = sum;
+    }
 }
+
+
+// let sumNumber = function(numbers){
+//     let sum = 0;
+//     for(let i = 0; i <= numbers - 1; i++){
+//         if(i % 3 === 0 || i % 5 === 0){
+//             sum += i;
+//         }
+//     }
+//     return sum
+// }
 
 // const number = new EulerNumber(100);
 
 // randomArray.threeMultiple()
-
 
 // let threeMultiple = function (array) {
 //     for (i = 0; i <= 1000; i += 3) {
@@ -53,15 +66,5 @@ EulerNumbers.prototype.threeMultiple = function () {
 // fiveMultiple(eulerArray);
 // fifteenPrune(eulerArray);
 // sumArray(eulerArray, eulerSum);
-
-// let sumNumber = function(numbers){
-//     let sum = 0;
-//     for(let i = 0; i <= numbers; i++){
-//         if(i % 3 === 0 || i % 5 === 0){
-//             sum += i;
-//         }
-//     }
-//     return sum
-// }
 
 // let numbers = 1000;
